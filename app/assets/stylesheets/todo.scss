@@ -1,3 +1,22 @@
 // Place all the styles related to the todo controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  font-family: 'Lora', serif;
+}
+
+ul.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+li.item {
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background: linear-gradient(#FFFFFF, #DEDEDE);
+  border-radius: 3px;
+  margin: 5px 0;
+}
