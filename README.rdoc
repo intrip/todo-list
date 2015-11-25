@@ -1,28 +1,17 @@
-== README
+== Todo:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* prepara tutta l'app
+    * lista task gerarchica (OK)
+    * layout base e componenti con form sopra, lista sotto e dettaglio a destra
+    * form creazione task
+    * dettaglio task con scrittura messaggio e edit
+    * login utente
+    * backend per tasks etc
+    * altre rifiniture
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* documentazione su come installarla
+* test esempio pratico e durata 3h
+* raccogli materiale slide
+* prepara le slide
+* prepara presentazione
+* letture consigliate
