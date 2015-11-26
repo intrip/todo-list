@@ -2,10 +2,49 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// layout
 body{
   font-family: 'Open Sans', sans-serif;
 }
 
+div.container {
+  height: 100%;
+  width: 100%;
+}
+
+div.header {
+  height: 50px;
+  width: 100%;
+  h3{
+    text-align: center;
+  }
+}
+
+div.main {
+  heigth: 100%;
+}
+
+div.item-container {
+  height: 100%;
+}
+div.item-detail {
+  height: 100%;
+}
+
+// item creation form
+div.create-item {
+
+}
+
+div.form-title{
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+// item list
 ul.todo-list {
   list-style: none;
   padding: 0 0 0 15px;
