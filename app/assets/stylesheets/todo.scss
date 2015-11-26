@@ -4,8 +4,9 @@
 
 
 // layout
+html { height: 100%; }
 body{
-  font-family: 'Open Sans', sans-serif;
+  height: 100%;
 }
 
 div.container {
@@ -17,34 +18,42 @@ div.header {
   height: 50px;
   width: 100%;
   h3{
+    font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
   }
 }
 
-div.main {
-  heigth: 100%;
+// item detail form
+div.item-detail-container {
+  height: 100%;
+  padding: 20px;
 }
 
-div.item-container {
-  height: 100%;
-}
 div.item-detail {
+  padding: 5px;
   height: 100%;
+  box-shadow: 1px 2px 7px #B1AFAF;
 }
 
-// item creation form
-div.create-item {
-
-}
-
-div.form-title{
+textarea#body {
   height: 50px;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 0;
+  transition: 0.3s;
+}
+textarea#body:focus {
+  height: 150px;
 }
 
 // item list
+div.item-list-container {
+  height: 100%;
+  padding: 20px;
+}
+
+div.item-list {
+  padding: 5px;
+  box-shadow: 1px 2px 7px #B1AFAF;
+}
+
 ul.todo-list {
   list-style: none;
   padding: 0 0 0 15px;
@@ -60,7 +69,12 @@ li div.item {
   min-height: 25px;
   padding: 5px;
   border: 1px solid #ccc;
-  background: linear-gradient(#FFFFFF, #DEDEDE);
+  background: linear-gradient(#FFFFFF, #F3F2F2);
   border-radius: 3px;
   margin: 5px 0;
+}
+
+li div.item.selected{
+  background: linear-gradient(#F3F2F2, #FFFFFF);
+  font-weight: bold;
 }

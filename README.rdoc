@@ -2,7 +2,8 @@
 
 * prepara tutta l'app
     * lista task gerarchica (OK)
-    * layout base e componenti con form sopra, lista sotto e dettaglio a destra
+    * layout base e componenti con form dettaglio a destra
+    * lista geraricha espandibile e add new posizionable
     * form creazione task
     * dettaglio task con scrittura messaggio e edit
     * login utente
