@@ -1,7 +1,7 @@
 <script type="text/ng-template" id="itemList">
     <div class="item" ng-click="selectItem(item)" ng-class="selectedItem == item ? 'selected' : ''">
-        <input type="checkbox" ng-checked="item.completed" ng-model="item.completed"/>
-        {{item.title}}: {{item.description}}
+        <input type="checkbox" ng-checked="item.completed" ng-model="item.completed" />
+        {{item.title}}
     </div>
     <ul ng-if="item.items" class="todo-list">
         <li ng-repeat="item in items" class="item" ng-include="'itemList'">
@@ -10,7 +10,7 @@
 </script>
 
 <div>
-    <button class="btn btn-sm btn-primary pull-right">Aggiungi nuovo</button>
+    <button class="btn btn-sm btn-primary pull-right"><i class="fa fa-plus-circle"></i> Aggiungi nuovo</button>
 </div>
 <div class="clearfix"></div>
 
