@@ -33,7 +33,7 @@ angular.module('todoApp')
                     },
                     {
                         id: 3,
-                        parent_id: 2,
+                        parent_id: 1,
                         title: "titolo3",
                         description: "description3",
                         body: "html text",
@@ -54,10 +54,13 @@ angular.module('todoApp')
                         created_at: "2015-11-24 12:40:06",
                         updated_at: "2015-11-24 12:40:06",
                         due_date: "2015-11-24 12:40:06"
-                    }];
+                    }
+        ];
 
                 $scope.selectItem = function(item) {
+                    // GO from here and find a way to also get the item in the list
                     $scope.selectedItem = item;
+                    $scope.selectedItemFromItems = nestedItems.searchItem(item.id,$scope.items);
                 }
 
                 nestedItems.build($scope);
