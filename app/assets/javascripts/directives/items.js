@@ -1,35 +1,11 @@
 angular.module('todoApp')
 
-    .directive('items', function () {
+    .directive('items', function(nestedItems) {
         return {
 //            replace: true,
             restrict: 'E',
             templateUrl: 'todo/items.html',
             controller: function ($scope) {
-                $scope.nestedItemList = function(items) {
-                    var nestedList = [];
-
-                    angular.forEach(items, function(item, key) {
-                        this.push(item);
-                    }, nestedList);
-
-
-//                    for(var key in items){
-//                        var item = items[key];
-//                        if(item.parent_id !== null) {
-//                            // move the item to his parent
-//                        }
-//                        else
-//                        {
-//                            //just add the item as his position
-//                            nestedList.push[item];
-//                            console.log("here", nestedList);
-//                        }
-//                    }
-//                    console.log(nestedList);
-                    return nestedList;
-                }
-
                 $scope.items = [
                     {
                         id: 1,
@@ -83,6 +59,8 @@ angular.module('todoApp')
                 $scope.selectItem = function(item) {
                     $scope.selectedItem = item;
                 }
+
+                nestedItems.build($scope);
             }
         };
     });
