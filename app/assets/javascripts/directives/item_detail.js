@@ -9,7 +9,6 @@ angular.module('todoApp')
                 scope.buildNestedItems = function(){
                     nestedItems.build(scope);
                 }
-                //TODO: remove selectedItem.id in options
             }
         };
     });
