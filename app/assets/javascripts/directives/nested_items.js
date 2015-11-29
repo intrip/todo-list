@@ -13,7 +13,7 @@ angular.module('todoApp')
             }
             return null;
         };
-        buildNestedItems = function ($scope) {
+        var buildNestedItems = function ($scope) {
             var nestedList = [];
             var itemCopy = angular.copy($scope.items);
 
@@ -52,9 +52,21 @@ angular.module('todoApp')
 //            console.log($scope.items);
         }
 
+//        var childrens = function(item) {
+//            var res = [];
+//            for(var i =0; item.items && i < item.items.length;i++){
+//                res.push(item.items[i]);
+//                if(item.items[i] && item.items[i].length > 0 ){
+//                    res.push(childrens(item.items[i]));
+//                }
+//            }
+//            return res;
+//        };
+
 
         return {
             build: buildNestedItems,
-            searchItem: searchItem
+            searchItem: searchItem,
+            childrens: childrens
         };
     });
