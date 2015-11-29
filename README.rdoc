@@ -16,3 +16,18 @@
 * prepara le slide
 * prepara presentazione
 * letture consigliate
+
+LEZIONE:
+
+1) presentazione su:
+    - Te
+    - Programming languages, duck typed e strong typed
+    - Ruby
+    - Ruby on rails
+    - AngularJS
+    - Git
+
+2) live coding e link github
+    - parti da boilerplate
+    - 2 parole sulle ide rubymine e vim
+3) coding snippets

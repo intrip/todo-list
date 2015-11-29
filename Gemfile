@@ -37,8 +37,22 @@ gem 'twitter-bootstrap-rails', '~> 3.2'
 gem 'angularjs-rails'
 
 group :development, :test do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Offers a better rails console
+  gem 'pry-rails'
+  gem 'pry-doc'
+  # Rspec
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'faker'
 end
 
 group :development do
