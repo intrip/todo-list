@@ -28,6 +28,11 @@ LEZIONE:
     - Git
 
 2) live coding e link github
-    - parti da boilerplate
+    - parti da boilerplate con rails angular base e specs
     - 2 parole sulle ide rubymine e vim
 3) coding snippets
+4) letture consigliate:
+    - podr
+    - clean coders
+    - ood programming
+    - poeea

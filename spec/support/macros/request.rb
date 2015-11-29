@@ -1,5 +1,5 @@
 module RequestMacros
   def parseResponse
-    @json ||= JSON(response.body, symbolize_names: true)
+    @json ||= JSON(response.body)
   end
 end

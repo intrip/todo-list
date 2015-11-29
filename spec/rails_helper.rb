@@ -11,8 +11,8 @@ require File.expand_path("../../config/environment", __FILE__)
 Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each { |f| require f }
 
 RSpec.configure do |config|
-  config.include ControllerMacros
-  
+  config.include RequestMacros
+
   ###
   # Database handling
   ###
@@ -29,9 +29,14 @@ RSpec.configure do |config|
 
   config.before(:all) do
     DatabaseCleaner.start # usually this is called in setup of a test
+    seed_data
   end
 
   config.after(:all) do
     DatabaseCleaner.clean
   end
+end
+
+def seed_data
+  @item_1 = Item.create(title: "ruby", description: "ruby is beatiful", body: "")
 end
