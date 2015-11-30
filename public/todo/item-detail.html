@@ -2,7 +2,7 @@
     <a href="#" title="cancella" ng-click="deleteItem(selectedItem.id)"><i class="fa fa-trash-o"></i></a>
 
 </div>
-<form>
+<form ng-submit="submit()">
     <div class="form-group">
         <select ng-model="selectedItemFromItems.parent_id"
                 name="parent_id"
@@ -21,7 +21,7 @@
     <div class="form-group">
         <textarea name="body" class="form-control" id="body" placeholder="note" ng-model="selectedItem.body"></textarea>
     </div>
-    <!--<input type="submit" class="btn btn-primary btn-sm pull-right" value="Salva">-->
+    <input type="submit" class="btn btn-primary btn-sm pull-right" value="Salva" ng-disabled="scope.updating === true || !selectedItem">
 
     <div class="clearfix"></div>
 </form>

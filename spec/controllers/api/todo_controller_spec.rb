@@ -59,5 +59,31 @@ module Api
         end
       end
     end
+
+    describe '#update' do
+      let(:action) { ->{put "/api/todo/#{id}", {title: "new title", description: "new_description", body: "new body"}} }
+      context 'item does not exists' do
+        let(:id) { 999 }
+        it 'responds_with 404' do
+          action.call
+          expect(response).to have_http_status 404
+        end
+      end
+      context 'item exists' do
+        let(:id) {@item_1.id}
+        it 'responds_with 200' do
+          action.call
+          expect(response).to have_http_status 200
+        end
+        it 'returns the item updated' do
+          action.call
+          expect(parseResponse).to include({"title" => "new title", "description" => "new_description", "body" =>  "new body"})
+        end
+        it 'updates the item attributes' do
+          action.call
+          expect(@item_1.reload.attributes).to include({"title" => "new title", "description" => "new_description", "body" =>  "new body"})
+        end
+      end
+    end
   end
 end

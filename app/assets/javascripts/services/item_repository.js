@@ -12,6 +12,9 @@ angular.module('todoApp')
             },
             delete: function(id) {
                 return $http({method: 'DELETE', url: resourceUrl + "/" + id});
+            },
+            update: function(id, data) {
+                return $http({method: 'PUT', url: resourceUrl + "/" + id, data: data});
             }
         };
     });

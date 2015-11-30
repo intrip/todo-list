@@ -14,6 +14,12 @@ angular.module('todoApp')
                         }
                     });
                 }
+                scope.submit = function() {
+                    scope.updating = true;
+                    itemRepository.update(scope.selectedItem.id, scope.selectedItem).then(function(item){
+                        scope.updating = false;
+                    });
+                };
             }
         }
     });

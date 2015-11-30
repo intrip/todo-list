@@ -1,6 +1,5 @@
 module Api
   class TodoController < ApiController
-
     def index
       render json: Item.all
     end
@@ -10,6 +9,15 @@ module Api
         render json: item, status: 200
       else
         render json: item.errors.messages, status: 422
+      end
+    end
+
+    def update
+      begin
+        item = Item.find(params[:id]).tap{|item| item.update(item_attributes)}
+        render json: item, status: 200
+      rescue ActiveRecord::RecordNotFound => e
+        render nothing: true, status: 404
       end
     end
 
