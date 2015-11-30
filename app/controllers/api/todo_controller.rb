@@ -1,5 +1,6 @@
 module Api
   class TodoController < ApiController
+
     def index
       render json: Item.all
     end
@@ -13,7 +14,12 @@ module Api
     end
 
     def destroy
-
+      begin
+        Item.find(params[:id]).destroy
+        render nothing: true, status: 204
+      rescue ActiveRecord::RecordNotFound => e
+        render nothing: true, status: 422
+      end
     end
 
     def item_attributes

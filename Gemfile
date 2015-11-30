@@ -33,8 +33,10 @@ gem 'twitter-bootstrap-rails', '~> 3.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+# Rails with angularjs
 gem 'angularjs-rails'
+# Postgres adapter
+gem 'pg'
 
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -56,10 +58,5 @@ group :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
 end
 

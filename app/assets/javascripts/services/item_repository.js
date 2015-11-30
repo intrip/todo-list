@@ -9,6 +9,9 @@ angular.module('todoApp')
             },
             create: function() {
                 return $http({method: 'POST', url: resourceUrl});
+            },
+            delete: function(id) {
+                return $http({method: 'DELETE', url: resourceUrl + "/" + id});
             }
         };
     });

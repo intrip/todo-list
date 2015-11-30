@@ -37,11 +37,26 @@ module Api
     end
 
     describe '#destroy' do
+      let(:action) { ->{delete "/api/todo/#{id}" }}
       context 'item exists' do
-
+        let(:id) { @item_1.id }
+        it 'responds with 204' do
+          action.call
+          expect(response).to have_http_status 204
+        end
+        it 'removes the item' do
+          expect{action.call}.to change{Item.count}.by -1
+        end
       end
       context 'item does not exists' do
-
+        let(:id) { 999 }
+        it 'responds with 422' do
+          action.call
+          expect(response).to have_http_status 422
+        end
+        it "doesn't remove any item" do
+          expect{action.call}.to_not change{Item.count}
+        end
       end
     end
   end

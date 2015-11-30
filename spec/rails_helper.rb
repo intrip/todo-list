@@ -27,13 +27,14 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
   end
 
-  config.before(:all) do
-    DatabaseCleaner.start # usually this is called in setup of a test
-    seed_data
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
   end
 
-  config.after(:all) do
-    DatabaseCleaner.clean
+  config.before(:all) do
+    seed_data
   end
 end
 
