@@ -17,18 +17,16 @@ angular.module('todoApp')
                         }
                     });
                 }
-                scope.flashMessage = function(message, type) {
-                    scope.flash = message;
-                    scope.flashType = type;
-                    scope.showFlash = true;
-                    $timeout(function(){scope.showFlash = false;},2000);
+                scope.flashSuccess = function(message) {
+                    scope.flashMessage = message;
+                    jQuery(".alert").show().delay(1000).fadeOut(1000);
                 };
 
                 scope.submit = function() {
                     scope.updating = true;
                     itemRepository.update(scope.selectedItem.id, scope.selectedItem).then(function(item){
                         scope.updating = false;
-                        scope.flashMessage('Salvataggio effettuato.', 'success');
+                        scope.flashSuccess('Salvataggio effettuato.');
                     });
                 };
             }
