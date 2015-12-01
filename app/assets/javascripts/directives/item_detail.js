@@ -1,10 +1,13 @@
 angular.module('todoApp')
 
-    .directive('itemDetail', function ($filter, itemRepository) {
+    .directive('itemDetail', function ($filter, $timeout, itemRepository) {
         return {
 //            replace: true,
             restrict: 'E',
             templateUrl: 'todo/item-detail.html',
+            controller: function($scope){
+                $scope.updated = false;
+            },
             link: function(scope, element, attrs) {
                 scope.deleteItem = function (id){
                     itemRepository.delete(id).then( function(id){
@@ -14,10 +17,18 @@ angular.module('todoApp')
                         }
                     });
                 }
+                scope.flashMessage = function(message, type) {
+                    scope.flash = message;
+                    scope.flashType = type;
+                    scope.showFlash = true;
+                    $timeout(function(){scope.showFlash = false;},2000);
+                };
+
                 scope.submit = function() {
                     scope.updating = true;
                     itemRepository.update(scope.selectedItem.id, scope.selectedItem).then(function(item){
                         scope.updating = false;
+                        scope.flashMessage('Salvataggio effettuato.', 'success');
                     });
                 };
             }

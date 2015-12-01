@@ -5,7 +5,7 @@
     * layout base e componenti con form dettaglio a destra (OK)
     * lista geraricha espandibile e add new posizionable (working)
     * pulsante add new che aggiunge sopra (Ok)
-    * dettaglio task con scrittura messaggio e edit e validazione form
+    * dettaglio task con scrittura messaggio e edit e validazione form (fai flash message fix css usae transition e isola scope direttiva detail)
     * delete item (OK)
     * login utente e gravatar image on top
     * ordering api index e filterin by due date and completed
