@@ -2,31 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-// layout
-html { height: 100%; }
-body{
-  height: 100%;
-  -webkit-font-smoothing: antialiased;
-  font-family: 'Helvetica Neue' Helvetica Arial;
-  font-weight: 300;
-}
-
 div.container {
   height: 100%;
   width: 100%;
 }
 
-div.header {
-  height: 50px;
-  width: 100%;
-  h3{
-    text-align: center;
-    font-weight: 100;
-    font-size: 60px;
-    line-height: 35px;
-  }
-}
+//div.header {
+//  height: 50px;
+//  width: 100%;
+//  h3{
+//    text-align: center;
+//    font-weight: 100;
+//    font-size: 60px;
+//    line-height: 35px;
+//  }
+//}
 
 // item detail form
 

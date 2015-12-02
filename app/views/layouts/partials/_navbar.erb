@@ -1,0 +1,13 @@
+<div id="navbar" class="navbar-collapse collapse">
+  <ul class="nav navbar-nav">
+    <li class="navbar-brand">Todo App</li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <%= gravatar_image_tag(current_user.email, alt: current_user.email, class: "gravatar") %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+      Logout
+      <% end %>
+    </li>
+  </ul>
+</div>
