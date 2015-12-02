@@ -7,7 +7,8 @@
     * pulsante add new che aggiunge sopra (Ok)
     * dettaglio task con scrittura messaggio e edit e validazione form (OK)
     * delete item (OK)
-    * login utente e gravatar image on top
+    * login utente e gravatar image on top (OK)
+    * bugfix delete e add e delete senza save
     * ordering api index e filterin by due date and completed
     ----- POI
     * show of todo dell'utente
