@@ -10,7 +10,7 @@ body{
 div#navbar {
   box-shadow: 1px 2px 7px #B1AFAF;
   li a{
-    display: inline-block;
+//    display: inline-block;
   }
 }
 // gravatar image
@@ -19,4 +19,7 @@ img.gravatar{
   height: 45px;
   border: 2px solid #ccc;
   width: auto;
+}
+li.profile-dropdown a{
+  padding: 2px 10px;
 }

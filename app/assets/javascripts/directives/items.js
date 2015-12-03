@@ -15,7 +15,7 @@ angular.module('todoApp')
 
                 $scope.addItem = function(){
                     itemRepository.create().then(
-                        function(item){$scope.items.unshift(item);}
+                        function(item){$scope.items.unshift(item.data);}
                     );
                 };
             }
