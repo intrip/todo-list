@@ -9,13 +9,16 @@
     * delete item (OK)
     * login utente e gravatar image on top (OK)
     * bugfix delete e add e delete senza save (OK)
-    * ordering api index e filterin by due date and completed
+    * ordering api index e filtering by due date and completed (ok)
+    * gestione due date e ordinamento per essa con eventuali filtri
     ----- POI
     * show of todo dell'utente
     * associazione di + utenti
     * update seeds
     * backend per tasks etc
+    * clean gerarchia
     * altre rifiniture
+    * vedi x il discorso gerarchia se i o no
 
 * documentazione su come installarla
 * test esempio pratico e durata 3h

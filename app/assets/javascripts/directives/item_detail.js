@@ -10,6 +10,8 @@ angular.module('todoApp')
             },
             link: function(scope, element, attrs) {
                 scope.deleteItem = function (id){
+                    if ( ! confirm("Sei sicuro di cancellare questo elemento?"))
+                        return;
                     itemRepository.delete(id).then( function(id){
                         for(var i= 0, len = scope.items.length; i<len; i++) {
                             if(scope.items[i].id === id)
