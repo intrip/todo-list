@@ -12,7 +12,7 @@ Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each { |f| require f }
 
 RSpec.configure do |config|
   config.include RequestMacros
-  config.include Devise::TestHelpers
+  config.include Warden::Test::Helpers, type: :request
 
   ###
   # Database handling
@@ -41,4 +41,5 @@ end
 
 def seed_data
   @item_1 = Item.create(title: "ruby", description: "ruby is beatiful", body: "")
+  @user_1 = User.create(email: "user1@email.com")
 end

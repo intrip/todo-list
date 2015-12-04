@@ -2,6 +2,10 @@ require 'rails_helper'
 
 module Api
   describe TodoController, type: :request do
+    before do
+      Warden.test_mode!
+      login_as(@user_1)
+    end
     describe '#index' do
       let(:action) { ->{get '/api/todo' }}
       before do
