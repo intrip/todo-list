@@ -26,7 +26,6 @@ angular.module('todoApp')
 
                 scope.submit = function() {
                     scope.updating = true;
-                    console.log(scope.selectedItem);
                     itemRepository.update(scope.selectedItem.id, scope.selectedItem).then(function(item){
                         scope.updating = false;
                         scope.flashSuccess('Salvataggio effettuato.');

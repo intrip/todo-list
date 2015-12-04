@@ -10,8 +10,9 @@
     * login utente e gravatar image on top (OK)
     * bugfix delete e add e delete senza save (OK)
     * ordering api index e filtering by due date and completed (ok)
-    * gestione due date e ordinamento per essa con eventuali filtri
-    * gestone task completed
+    * gestione due date e ordinamento per essa con eventuali filtri (ok)
+    * finish test helper e devise e auth
+    * gestone task completed(quando spunti fa la chiamata e lo completa) e show only completed but with filter
     * formatta scadenza meglio
     ----- POI
     * show of todo dell'utente e assegnamento di un'utente all'item

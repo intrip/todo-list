@@ -9,7 +9,7 @@ angular.module('todoApp')
                 var setupOrderingFields = function(){
                     $scope.ordering = {};
                     $scope.ordering.fields = [
-                        {label: "Sacenza", value: "due_date"},
+                        {label: "Scadenza", value: "due_date"},
                         {label: "Titolo", value: "title"},
                         {label: "Data di creazione", value: "created_at"},
                         {label: "Ultimo aggiornamento", value: "updated_at"}
@@ -34,7 +34,7 @@ angular.module('todoApp')
 
                 $scope.addItem = function(){
                     itemRepository.create().then(
-                        function(item){$scope.items.unshift(item.data);}
+                        function(item){ $scope.items.unshift(item.data);}
                     );
                 };
 

@@ -12,6 +12,7 @@ Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each { |f| require f }
 
 RSpec.configure do |config|
   config.include RequestMacros
+  config.include Devise::TestHelpers
 
   ###
   # Database handling
