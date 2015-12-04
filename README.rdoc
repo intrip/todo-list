@@ -11,8 +11,9 @@
     * bugfix delete e add e delete senza save (OK)
     * ordering api index e filtering by due date and completed (ok)
     * gestione due date e ordinamento per essa con eventuali filtri
+    * gestone task completed
     ----- POI
-    * show of todo dell'utente
+    * show of todo dell'utente e assegnamento di un'utente all'item
     * associazione di + utenti
     * update seeds
     * backend per tasks etc

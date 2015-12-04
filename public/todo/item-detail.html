@@ -2,10 +2,21 @@
     <div class="alert alert-success" style="display:none">{{flashMessage}}</div>
 </div>
 <div class="actions">
-    <a href="#" title="cancella" id="delete" ng-click="deleteItem(selectedItem.id)"><i class="fa fa-trash-o"></i></a>
+    <a title="cancella" id="delete" ng-click="deleteItem(selectedItem.id)"><i class="fa fa-trash-o"></i></a>
 
 </div>
 <form ng-submit="submit()">
+    <div class="form-group">
+        <div class="dropdown">
+            <a class="dropdown-toggle" id="due-date" role="button" data-toggle="dropdown" data-target="#" href="#">
+                <div class="input-group"><input type="text" class="form-control" data-ng-model="data.dateDropDownInput"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                </div>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <datetimepicker data-ng-model="item.due_date" data-datetimepicker-config="{ dropdownSelector: '#due-date' }"/>
+            </ul>
+        </div>
+    </div>
     <div class="form-group">
         <input type="text" name="title" class="form-control" id="title" placeholder="titolo" ng-model="selectedItem.title"/>
     </div>

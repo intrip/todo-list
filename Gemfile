@@ -35,12 +35,15 @@ gem 'twitter-bootstrap-rails', '~> 3.2'
 # gem 'capistrano-rails', group: :development
 # Rails with angularjs
 gem 'angularjs-rails'
+# DateTime helper needed for angular-bootstrap datatimepicker
+gem 'momentjs-rails'
 # Postgres adapter
 gem 'pg'
 # Authentication
 gem 'devise'
 
 gem 'gravatar_image_tag', '~> 1.2'
+
 
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views

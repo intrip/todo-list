@@ -18,8 +18,9 @@
 //= require angular
 //= require angular-route
 //= require angular-resource
+//= require moment
 
 //= require_tree .
 
-
-$('.dropdown-toggle').dropdown()
+// start twbs dropdown handler
+$(document).ready(function(){$('.dropdown-toggle').dropdown()});
