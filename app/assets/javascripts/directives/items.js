@@ -9,6 +9,7 @@ angular.module('todoApp')
                 var setupOrderingFields = function(){
                     $scope.ordering = {};
                     $scope.ordering.fields = [
+                        {label: "Sacenza", value: "due_date"},
                         {label: "Titolo", value: "title"},
                         {label: "Data di creazione", value: "created_at"},
                         {label: "Ultimo aggiornamento", value: "updated_at"}
@@ -17,8 +18,8 @@ angular.module('todoApp')
                         {label: "Crescente", value: "+"},
                         {label: "Decrescente", value: "-"}
                     ];
-                    $scope.ordering.field = "title";
-                    $scope.ordering.type = "+";
+                    $scope.ordering.field = "due_date";
+                    $scope.ordering.type = "-";
                     $scope.updateOrdering();
                 };
                 $scope.updateOrdering = function(){

@@ -8,12 +8,13 @@
 <form ng-submit="submit()">
     <div class="form-group">
         <div class="dropdown">
-            <a class="dropdown-toggle" id="due-date" role="button" data-toggle="dropdown" data-target="#" href="#">
-                <div class="input-group"><input type="text" class="form-control" data-ng-model="data.dateDropDownInput"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            <label>Scadenza</label>
+            <a class="dropdown-toggle" id="due-date" role="button" data-toggle="dropdown" data-target="#">
+                <div class="input-group"><input type="text" class="form-control" format-date-time-italian data-ng-model="selectedItem.due_date"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                 </div>
             </a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <datetimepicker data-ng-model="item.due_date" data-datetimepicker-config="{ dropdownSelector: '#due-date' }"/>
+                <datetimepicker data-ng-model="selectedItem.due_date" data-datetimepicker-config="{ dropdownSelector: '#due-date' }"  />
             </ul>
         </div>
     </div>

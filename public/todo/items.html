@@ -34,7 +34,8 @@
     <li ng-repeat="item in items | orderBy: orderingFilter | filter: search" class="item">
         <div class="item" ng-click="selectItem(item)" ng-class="selectedItem == item ? 'selected' : ''">
             <input type="checkbox" ng-checked="item.completed" ng-model="item.completed" />
-            {{item.title}}
+            <span>{{item.title}}</span>
+            <span class="due-date pull-right">scadenza: {{item.due_date | date: "dd/MM/yyyy HH:mm"}}</span>
         </div>
     </li>
 </ul>
