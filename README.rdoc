@@ -11,9 +11,9 @@
     * bugfix delete e add e delete senza save (OK)
     * ordering api index e filtering by due date and completed (ok)
     * gestione due date e ordinamento per essa con eventuali filtri (ok)
-    * finish test helper e devise e auth
+    * finish test helper e devise e auth (ok)
     * gestone task completed(quando spunti fa la chiamata e lo completa) e show only completed but with filter
-    * formatta scadenza meglio
+    * formatta scadenza meglio (ok)
     ----- POI
     * show of todo dell'utente e assegnamento di un'utente all'item
     * associazione di + utenti
