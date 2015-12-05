@@ -38,6 +38,11 @@ angular.module('todoApp')
                     );
                 };
 
+                $scope.search = function(){
+                    // TODO go from here build the new search with completed true/false aswell
+                    return $scope.search;
+                };
+
                 // init data
                 itemRepository.all().then(function(items){$scope.items = items.data});
                 setupOrderingFields();
