@@ -40,6 +40,10 @@ div.item-detail {
   padding: 5px;
   height: 100%;
   box-shadow: 1px 2px 7px #B1AFAF;
+
+  #delete {
+    cursor: pointer;
+  }
 }
 
 textarea#body {
