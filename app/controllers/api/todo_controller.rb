@@ -1,7 +1,13 @@
 module Api
   class TodoController < ApiController
     def index
-      render json: Item.all
+      items = Item
+      if(filters = params.fetch("filter",false))
+        filters.each do |key, value|
+          items = items.where(key => value)
+        end
+      end
+      render json: items.all
     end
 
     def create

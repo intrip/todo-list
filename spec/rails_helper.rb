@@ -41,5 +41,6 @@ end
 
 def seed_data
   @item_1 = Item.create(title: "ruby", description: "ruby is beatiful", body: "")
+  @item_2 = Item.create(title: "ruby completed", description: "ruby is beatiful", body: "", completed: true)
   @user_1 = User.create(email: "user1@email.com")
 end
