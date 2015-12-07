@@ -42,7 +42,7 @@
             <div class="item" ng-click="selectItem(item)" ng-class="selectedItem == item ? 'selected' : ''">
                 <input type="checkbox" ng-checked="item.completed" ng-model="item.completed" ng-click="updateComplete(item)"/>
                 <span>{{item.title}}</span>
-                <span class="due-date pull-right">scadenza: {{item.due_date | date: "dd/MM/yyyy HH:mm"}}</span>
+                <span class="due-date pull-right" ng-class="dateStatusClass(item.due_date)">scadenza: {{item.due_date | date: "dd/MM/yyyy HH:mm"}}</span>
             </div>
         </li>
         <div class="no-results" ng-show="(items | filter: search).length === 0">nessun risultato trovato</div>

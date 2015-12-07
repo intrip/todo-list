@@ -15,7 +15,7 @@ module Api
       expect(response).to have_http_status 200
     end
 
-    it 'returns the item list as json' do
+    it 'returns the item list of the current user as json' do
       expect(response.body).to eq [@item_1, @item_2].to_json
     end
 
@@ -44,6 +44,11 @@ module Api
     context 'success' do
       it 'adds a new item' do
         expect { action.call }.to change { Item.count }.by(1)
+      end
+
+      it 'creates an item associated to the current user' do
+        action.call
+        expect(parseResponse["user_id"]).to eq(@user_1.id)
       end
 
       it 'responds with 200' do

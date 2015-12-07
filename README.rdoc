@@ -1,51 +1,18 @@
-== Todo:
+== Todo app
+Un'applicazione per creare una todo-list dinamica differente per ogni utente.
 
-* prepara tutta l'app
-    * lista task gerarchica (OK)
-    * layout base e componenti con form dettaglio a destra (OK)
-    * lista geraricha espandibile e add new posizionable (working)
-    * pulsante add new che aggiunge sopra (Ok)
-    * dettaglio task con scrittura messaggio e edit e validazione form (OK)
-    * delete item (OK)
-    * login utente e gravatar image on top (OK)
-    * bugfix delete e add e delete senza save (OK)
-    * ordering api index e filtering by due date and completed (ok)
-    * gestione due date e ordinamento per essa con eventuali filtri (ok)
-    * finish test helper e devise e auth (ok)
-    * gestone task completed(quando spunti fa la chiamata e lo completa) e show only completed but with filter
-    * formatta scadenza meglio (ok)
-    ----- POI
-    * show of todo dell'utente e assegnamento di un'utente all'item
-    * associazione di + utenti
-    * update seeds
-    * backend per tasks etc
-    * clean gerarchia
-    * altre rifiniture
-    * vedi x il discorso gerarchia se i o no
+== Installazione
+Installare rails sulla propria macchina: http://rubyonrails.org/download/
+Scaricare il progetto da github: https://github.com/jacopo-beschi-intersail/todo-list/archive/master.zip
+Installare postgres
+Accedere alla console nella cartella root del progetto
+Eseguire bundle
+Eseguire rake db:setup
+Eseguire rake db:seed
+Eseguire rails server
+Potete accedere all'applicazione tramite il link: http://localhost:3000
 
-* documentazione su come installarla
-* test esempio pratico e durata 3h
-* raccogli materiale slide
-* prepara le slide
-* prepara presentazione
-* letture consigliate
+=== Dati di accesso:
 
-LEZIONE:
-
-1) presentazione su:
-    - Te
-    - Programming languages, duck typed e strong typed
-    - Ruby
-    - Ruby on rails
-    - AngularJS
-    - Git
-
-2) live coding e link github
-    - parti da boilerplate con rails angular base e specs
-    - 2 parole sulle ide rubymine e vim
-3) coding snippets
-4) letture consigliate:
-    - podr
-    - clean coders
-    - ood programming
-    - poeea
+username_a: jacopo.beschi@intersail.it, password: password
+username_b: massimiliano.redolfi@intersail.it, password: password

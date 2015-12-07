@@ -1,7 +1,7 @@
 module Api
   class TodoController < ApiController
     def index
-      items = Item
+      items = Item.where(user: current_user)
       if(filters = params.fetch("filter",false))
         filters.each do |key, value|
           items = items.where(key => value)
@@ -11,7 +11,7 @@ module Api
     end
 
     def create
-      if item = Item.create(item_attributes)
+      if item = Item.create(item_attributes.merge({user: current_user}))
         render json: item, status: 200
       else
         render json: item.errors.messages, status: 422

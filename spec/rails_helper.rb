@@ -13,6 +13,7 @@ Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each { |f| require f }
 RSpec.configure do |config|
   config.include RequestMacros
   config.include Warden::Test::Helpers, type: :request
+  config.include Shoulda::Matchers::ActiveRecord, type: :model
 
   ###
   # Database handling
@@ -40,7 +41,12 @@ RSpec.configure do |config|
 end
 
 def seed_data
-  @item_1 = Item.create(title: "ruby", description: "ruby is beatiful", body: "")
-  @item_2 = Item.create(title: "ruby completed", description: "ruby is beatiful", body: "", completed: true)
-  @user_1 = User.create(email: "user1@email.com")
+  User.destroy_all
+  Item.destroy_all
+
+  @user_1 = User.create(email: "user1@email.com", password: "password")
+  @user_2 = User.create!(email: "user2@email.com", password: "password")
+  @item_1 = Item.create!(title: "ruby", description: "ruby is beatiful", body: "", user: @user_1)
+  @item_2 = Item.create!(title: "ruby completed", description: "ruby is beatiful", body: "", completed: true, user: @user_1)
+  @item_3 = Item.create!(title: "ruby of user 2 completed", description: "ruby is beatiful", body: "", completed: true, user: @user_2)
 end

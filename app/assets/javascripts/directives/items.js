@@ -56,6 +56,12 @@ angular.module('todoApp')
                     itemRepository.all($scope.filter).then(function(items){$scope.items = items.data});
                 };
 
+                $scope.dateStatusClass = function(due_date){
+                    if (due_date && new Date(due_date) < new Date())
+                        return 'expired';
+                    return '';
+                };
+
                 // init data
                 $scope.refresh();
                 setupOrderingFields();
