@@ -2,7 +2,7 @@ angular.module('todoApp')
 
     .directive('items', function () {
         return {
-//            replace: true,
+            replace: true,
             restrict: 'E',
             templateUrl: 'todo/items.html',
             controller: function ($scope, itemRepository) {
@@ -38,8 +38,26 @@ angular.module('todoApp')
                     );
                 };
 
+                $scope.updateComplete = function(item){
+                    itemRepository.update(item.id, item).then( function() {
+                            $scope.refresh();
+                    });
+                };
+
+                // filtering default options
+                $scope.completeOptions = [
+                    {label: "Da fare", value: false},
+                    {label: "Completati", value: true},
+                    {label: "Tutti", value: undefined},
+                ];
+                $scope.filter =  {"filter[completed]": false};
+
+                $scope.refresh = function(){
+                    itemRepository.all($scope.filter).then(function(items){$scope.items = items.data});
+                };
+
                 // init data
-                itemRepository.all().then(function(items){$scope.items = items.data});
+                $scope.refresh();
                 setupOrderingFields();
             }
         };

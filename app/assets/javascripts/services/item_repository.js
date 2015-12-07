@@ -4,8 +4,9 @@ angular.module('todoApp')
         var resourceUrl = '/api/todo';
 
         return {
-            all: function() {
-                return $http({method: 'GET', url: resourceUrl});
+            all: function(params) {
+                params = params || {};
+                return $http({method: 'GET', url: resourceUrl, params: params});
             },
             create: function() {
                 return $http({method: 'POST', url: resourceUrl});

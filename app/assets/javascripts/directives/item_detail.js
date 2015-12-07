@@ -2,7 +2,7 @@ angular.module('todoApp')
 
     .directive('itemDetail', function ($filter, $timeout, itemRepository) {
         return {
-//            replace: true,
+            replace: true,
             restrict: 'E',
             templateUrl: 'todo/item-detail.html',
             controller: function($scope){
