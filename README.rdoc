@@ -1,5 +1,5 @@
 == Todo app
-Un'applicazione per creare una todo-list dinamica differente per ogni utente.
+Una todo-list dinamica differente per ogni utente.
 
 == Installazione
 Installare rails sulla propria macchina: http://rubyonrails.org/download/
