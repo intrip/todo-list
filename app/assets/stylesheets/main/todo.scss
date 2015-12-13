@@ -1,112 +1,97 @@
-// Place all the styles related to the todo controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-div.container {
+div.item-list-container {
   height: 100%;
-  width: 100%;
-}
+  padding: 20px;
 
-// item detail form
-div.actions {
-  width:100%;
-  height: 35px;
-  margin-bottom: 5px;
-  a {
-    float: right;
-    margin-right: 5px;
-    color: #ccc;
-    font-size: 24px;
-    border: 1px solid #ccc;
-    font-weight: 300;
-    border-radius: 45px;
-    width: 35px;
-    height: 35px;
-    padding-left: 7px;
-  }
+  div.item-list {
+    padding: 5px;
+    box-shadow: 1px 2px 7px #B1AFAF;
 
-  a:hover {
-    color: #717171;
-    border-color: #717171;
+    form.filter-form {
+      padding-left: 16px;
+      .search-field {
+        width: 250px;
+        #search {
+          width: 90%;
+        }
+      }
+    }
+
+    ul.todo-list {
+      list-style: none;
+      padding: 0 0 0 15px;
+      li {
+        width: 100%;
+        div.item {
+          min-height: 25px;
+          padding: 5px;
+          border: 1px solid #ccc;
+          background: linear-gradient(#FFFFFF, #F3F2F2);
+          border-radius: 3px;
+          margin: 5px 0;
+        }
+        div.item.selected {
+          background: linear-gradient(#F3F2F2, #FFFFFF);
+          border: 1px solid #428bca;
+        }
+      }
+    }
+
+    span.due-date {
+      font-weight: bold;
+    }
+    div.no-results {
+      margin-top: 15px;
+    }
+
+    .expired {
+      color: red;
+    }
   }
 }
 
 div.item-detail-container {
   height: 100%;
   padding: 20px;
-}
 
-div.item-detail {
-  padding: 5px;
-  height: 100%;
-  box-shadow: 1px 2px 7px #B1AFAF;
+  div.item-detail {
+    padding: 5px;
+    height: 100%;
+    box-shadow: 1px 2px 7px #B1AFAF;
 
-  #delete {
-    cursor: pointer;
-  }
-}
+    div.actions {
+      width: 100%;
+      height: 35px;
+      margin-bottom: 5px;
+      a {
+        float: right;
+        margin-right: 5px;
+        color: #ccc;
+        font-size: 24px;
+        border: 1px solid #ccc;
+        font-weight: 300;
+        border-radius: 45px;
+        width: 35px;
+        height: 35px;
+        padding-left: 7px;
+      }
 
-textarea#body {
-  height: 45px;
-  transition: 0.3s;
-}
-textarea#body:focus {
-  height: 200px;
-}
+      a:hover {
+        color: #717171;
+        border-color: #717171;
+      }
 
-// item list
-form.filter-form{
-  padding-left: 16px;
-  .search-field {
-    width: 250px;
-    #search {
-      width: 90%;
+      #delete {
+        cursor: pointer;
+      }
+    }
+
+    textarea#body {
+      height: 45px;
+      transition: 0.3s;
+    }
+
+    textarea#body:focus {
+      height: 200px;
     }
   }
-}
-div.item-list-container {
-  height: 100%;
-  padding: 20px;
-}
-
-div.item-list {
-  padding: 5px;
-  box-shadow: 1px 2px 7px #B1AFAF;
-
-  span.due-date {
-    font-weight: bold;
-  }
-  div.no-results {
-    margin-top: 15px;
-  }
-
-  .expired {
-    color: red;
-  }
-}
-
-ul.todo-list {
-  list-style: none;
-  padding: 0 0 0 15px;
-}
-
-ul.todo-list {
-  li {
-    width: 100%;
-  }
-}
-
-li div.item {
-  min-height: 25px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  background: linear-gradient(#FFFFFF, #F3F2F2);
-  border-radius: 3px;
-  margin: 5px 0;
-}
-
-li div.item.selected{
-  background: linear-gradient(#F3F2F2, #FFFFFF);
-  border: 1px solid #428bca;
-//  box-shadow: 1px 2px 3px #ccc;
 }

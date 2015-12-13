@@ -1,13 +1,12 @@
 angular.module('todoApp')
 
-.config(['$routeProvider',
-    function($routeProvider) {
-        $routeProvider.
-            when('/todo', {
-                templateUrl: 'todo/index.html',
-//                controller: 'todo'
-            })
-            .otherwise({
-            redirectTo: '/todo'
-        });
-    }]);
+    .config(['$routeProvider',
+        function ($routeProvider) {
+            $routeProvider.
+                when('/todo', {
+                    templateUrl: 'todo/index.html'
+                })
+                .otherwise({
+                    redirectTo: '/todo'
+                });
+        }]);

@@ -1,5 +1,4 @@
 <div class="item-list">
-    <div>
         <form class="form-inline filter-form">
             <div class="form-group">
                 <select id="completed-filter"
@@ -34,8 +33,6 @@
                 <input type="text" id="search" placeholder="cerca" ng-model="search" class="form-control">
             </div>
         </form>
-    </div>
-    <div class="clearfix"></div>
 
     <ul class="todo-list">
         <li ng-repeat="item in items | orderBy: orderingFilter | filter: search" class="item">
