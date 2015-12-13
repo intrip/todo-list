@@ -44,9 +44,9 @@ def seed_data
   User.destroy_all
   Item.destroy_all
 
-  @user_1 = User.create(email: "user1@email.com", password: "password")
-  @user_2 = User.create!(email: "user2@email.com", password: "password")
-  @item_1 = Item.create!(title: "ruby", description: "ruby is beatiful", body: "", user: @user_1)
-  @item_2 = Item.create!(title: "ruby completed", description: "ruby is beatiful", body: "", completed: true, user: @user_1)
-  @item_3 = Item.create!(title: "ruby of user 2 completed", description: "ruby is beatiful", body: "", completed: true, user: @user_2)
+  #@user_1 = User.create(email: "user1@email.com", password: "password")
+  #@user_2 = User.create!(email: "user2@email.com", password: "password")
+  #@item_1 = Item.create!(title: "ruby", description: "ruby is beatiful", body: "", user: @user_1)
+  #@item_2 = Item.create!(title: "ruby completed", description: "ruby is beatiful", body: "", completed: true, user: @user_1)
+  #@item_3 = Item.create!(title: "ruby of user 2 completed", description: "ruby is beatiful", body: "", completed: true, user: @user_2)
 end
