@@ -1,5 +1,8 @@
 <div class="item-detail">
-    <form>
+    <div class="messages">
+        <div class="alert alert-success" style="display:none">{{flashMessage}}</div>
+    </div>
+    <form ng-submit="submit()">
         <div class="form-group">
             <input type="text" name="title" class="form-control" id="title" placeholder="titolo" ng-model="selectedItem.title"/>
         </div>
@@ -10,6 +13,8 @@
         <div class="form-group">
             <textarea name="body" class="form-control" id="body" placeholder="note" ng-model="selectedItem.body"></textarea>
         </div>
+        <input type="submit" class="btn btn-primary btn-sm pull-right" value="Salva" ng-disabled="scope.updating === true || !selectedItem">
+
         <div class="clearfix"></div>
     </form>
 </div>
