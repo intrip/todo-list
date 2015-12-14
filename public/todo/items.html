@@ -1,9 +1,8 @@
 <div class="item-list">
 
-    <ul class="
-    list">
+    <ul class="todo-list">
         <li ng-repeat="item in items" class="item">
-            <div class="item">
+            <div class="item" ng-click="selectItem(item)" ng-class="selectedItem == item ? 'selected' : ''">
                 <span>{{item.title}}</span>
                 <span class="due-date pull-right">scadenza: {{item.due_date | date: "dd/MM/yyyy HH:mm"}}</span>
             </div>

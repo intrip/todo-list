@@ -24,6 +24,10 @@ angular.module('todoApp')
                         "due_date": "2015-12-13"
                     }
                 ];
+
+                $scope.selectItem = function (item) {
+                    $scope.selectedItem = item;
+                };
             }
         };
     });
