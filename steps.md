@@ -26,7 +26,8 @@
     - aggiungere ad item_detail il metodo deleteItem
     - aggiungere un div actions e link #delete con ng-click selectedItem && deleteItem(selectedItem.id)
 8. Ordinamento e ricerca base
-    - Ordinamento angular
+    - Ordinamento angular: select per l'ordering e item metodi updateOrdering che ritorna type + field
+      dove type è - per desc oppure asc senza niente davanti
     - Ricerca $search
 9  Gestione due date
     - Integrazione dettaglio due date con angular datetimepicker
