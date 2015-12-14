@@ -24,7 +24,7 @@
 7. Integrazione api delete
     - aggiungere all'item_repository il delete
     - aggiungere ad item_detail il metodo deleteItem
-    - ng-click selectedItem && deleteItem(selectedItem.id)
+    - aggiungere un div actions e link #delete con ng-click selectedItem && deleteItem(selectedItem.id)
 8. Ordinamento e ricerca base
     - Ordinamento angular
     - Ricerca $search
