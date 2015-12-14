@@ -42,6 +42,11 @@
       integrazione con la select angular e completedOptions array con {label:, value:}
 11 Integrazione autenticazione devise rails
     - Installazione devise
+        rails generate devise:install
+        rails generate devise User
+        devise_for :users
+        rails generate devise:views
+        configura la application_auth layout e different layout for devise
     - Layout di autenticazione
     - Modifica controller per autenticare prima
 12 Integrazione autenticazione api
@@ -52,6 +57,7 @@
     - Gravatar integrazione
     - Setup seeds
     - Show tests
+    - Automatic save with $watch
 
 finito il 13 porta questo file e le slides(vedi se c'è da aggiungere qualosa) su tutti i rami e sul master.
 integra slides con https://www.ruby-lang.org/it/documentation/ruby-from-other-languages/to-ruby-from-java/

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/' => 'todo#index'
 
+  devise_for :users
+
   namespace :api do
     resources 'todo', only: [:index, :create, :update, :destroy]
   end
