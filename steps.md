@@ -1,7 +1,7 @@
 1. Lista todo base con dati nello scope js
     - crea rotta e controller e view rails vuota
     - app.js
-    - ng-view e file public index.html con dentro container e item-list-container
+    - ng-view e file public index.html con dentro container e item-list-container, due date con | date: "dd/MM/yyyy HH:mm"
     - items.html con item-list e ul.todo-list e li.item con title e due_date
     - popola lo scope con gli items con dentro i title description body completed due_date
 2. Dettaglio todo singolo
@@ -30,8 +30,10 @@
       dove type è - per desc oppure asc senza niente davanti
     - Ricerca $search
 9  Gestione due date
-    - Integrazione dettaglio due date con angular datetimepicker
-    - Formattazione data model corretta
+    - Integrazione dettaglio due date con angular datetimepicker:
+        metti la 'ui.bootstrap.datetimepicker' in app.js
+        inserisci il dropdown e abilitalo: $(document).ready(function(){$('.dropdown-toggle').dropdown()});
+    - Formattazione data model corretta: format-date-time-italian
 10 Gestione task completati
     - Checkbox per completato con integrazione con api update item
     - Filtraggio per completato e non via api
@@ -49,3 +51,4 @@
     - Show tests
 
 finito il 13 porta questo file e le slides(vedi se c'è da aggiungere qualosa) su tutti i rami e sul master.
+integra slides con https://www.ruby-lang.org/it/documentation/ruby-from-other-languages/to-ruby-from-java/

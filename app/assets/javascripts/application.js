@@ -21,3 +21,6 @@
 //= require moment
 
 //= require_tree .
+
+// start twbs dropdown handler
+$(document).ready(function(){$('.dropdown-toggle').dropdown()});
