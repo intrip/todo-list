@@ -8,6 +8,7 @@
     - direttiva dettaglio con titolo descrizione note
     - metodo selectItem in items e integralo con direttiva che mostra il selectedItem.value
 3. Backend lista item
+    - crea model item e migrations con :title, :description, :body, :due_date
     - api controller todo con metodi: index, create, update, destroy
 4. Integrazione api lista
     - creare servizio repository con crud
@@ -17,3 +18,4 @@
     - Tasto di delete con confirm
     - Messaggio di success
 
+infine aggiorna questo file e porta questo e slide su tt i branch 
