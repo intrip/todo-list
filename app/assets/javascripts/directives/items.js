@@ -10,6 +10,12 @@ angular.module('todoApp')
                     itemRepository.all($scope.filter).then(function(items){$scope.items = items.data});
                 };
 
+                $scope.addItem = function(){
+                    itemRepository.create().then(
+                        function(item){ $scope.items.unshift(item.data);}
+                    );
+                };
+
                 $scope.selectItem = function (item) {
                     $scope.selectedItem = item;
                 };

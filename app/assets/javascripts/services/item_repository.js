@@ -8,6 +8,9 @@ angular.module('todoApp')
                 params = params || {};
                 return $http({method: 'GET', url: resourceUrl, params: params});
             },
+            create: function() {
+                return $http({method: 'POST', url: resourceUrl});
+            },
             update: function(id, data) {
                 return $http({method: 'PUT', url: resourceUrl + "/" + id, data: data});
             }

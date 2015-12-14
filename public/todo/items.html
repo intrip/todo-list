@@ -1,4 +1,10 @@
 <div class="item-list">
+    <form class="form-inline filter-form">
+        <div class="form-group pull-right">
+            <button class="btn btn-sm btn-primary" ng-click="addItem()"><i class="fa fa-plus-circle"></i> Aggiungi nuovo</button>
+        </div>
+        <div class="clearfix"></div>
+    </form>
 
     <ul class="todo-list">
         <li ng-repeat="item in items" class="item">

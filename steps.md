@@ -25,6 +25,26 @@
     - aggiungere all'item_repository il delete
     - aggiungere ad item_detail il metodo deleteItem
     - ng-click selectedItem && deleteItem(selectedItem.id)
+8. Ordinamento e ricerca base
+    - Ordinamento angular
+    - Ricerca $search
+9  Gestione due date
+    - Integrazione dettaglio due date con angular datetimepicker
+    - Formattazione data model corretta
+10 Gestione task completati
+    - Checkbox per completato con integrazione con api update item
+    - Filtraggio per completato e non via api
+11 Integrazione autenticazione devise rails
+    - Installazione devise
+    - Layout di autenticazione
+    - Modifica controller per autenticare prima
+12 Integrazione autenticazione api
+    - Modifica api che obbliga autenticazione cookie
+    - Filtraggio automatico per current_user.id in api
+13 Extra
+    - Show data scaduta in rosso
+    - Gravatar integrazione
+    - Setup seeds
+    - Show tests
 
-poi i seeds
-infine aggiorna questo file e porta questo e slide su tt i branch 
+finito il 13 porta questo file e le slides(vedi se c'è da aggiungere qualosa) su tutti i rami e sul master.
