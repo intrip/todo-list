@@ -5,29 +5,17 @@ angular.module('todoApp')
             replace: true,
             restrict: 'E',
             templateUrl: 'todo/items.html',
-            controller: function ($scope) {
-                $scope.items = [
-                    {
-                        "id": 23,
-                        "title": "ruby",
-                        "description": "ruby is beatiful",
-                        "body": "",
-                        "completed": false,
-                        "due_date": "2015-12-13",
-                    },
-                    {
-                        "id": 24,
-                        "title": "javascript",
-                        "description": "javascript is beatiful",
-                        "body": "",
-                        "completed": false,
-                        "due_date": "2015-12-13"
-                    }
-                ];
+            controller: function ($scope, itemRepository) {
+                $scope.refresh = function(){
+                    itemRepository.all($scope.filter).then(function(items){$scope.items = items.data});
+                };
 
                 $scope.selectItem = function (item) {
                     $scope.selectedItem = item;
                 };
+
+                // init data
+                $scope.refresh();
             }
         };
     });

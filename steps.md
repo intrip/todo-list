@@ -9,13 +9,22 @@
     - metodo selectItem in items e integralo con direttiva che mostra il selectedItem.value
 3. Backend lista item
     - crea model item e migrations con :title, :description, :body, :due_date
+    - popola il model con dei dati vari
     - api controller todo con metodi: index, create, update, destroy
 4. Integrazione api lista
-    - creare servizio repository con crud
-    - creare il setup e refresh lista items in angular
-5. Integrazione api dettaglio utente
-    - Tasto save non abilitato fino a che non hai id
-    - Tasto di delete con confirm
-    - Messaggio di success
+    - creare item_repository repository con all
+    - associare ad item il metodo di refresh on init
+5. Integrazione api update
+    - aggiungere all'item_repository l'update
+    - associare ad item-detail il save (non abilitato se non selectedItem e saving)
+    - flash message di success con jQuery
+6. Integrazione api create
+    - aggiungere all'item_repository il create
+    - aggiungere l'addItem ad items
+7. Integrazione api delete
+    - aggiungere all'item_repository il delete
+    - aggiungere ad item_detail il metodo deleteItem
+    - ng-click selectedItem && deleteItem(selectedItem.id)
 
+poi i seeds
 infine aggiorna questo file e porta questo e slide su tt i branch 
