@@ -35,8 +35,11 @@
         inserisci il dropdown e abilitalo: $(document).ready(function(){$('.dropdown-toggle').dropdown()});
     - Formattazione data model corretta: format-date-time-italian
 10 Gestione task completati
-    - Checkbox per completato con integrazione con api update item
-    - Filtraggio per completato e non via api
+    - aggiungi campo completed default=false con migration
+    - aggiungi il completed ai permitted params del ctrl
+    - aggiungi checkbox completato con al ng-click updateItem e ng-checked="item.completed"
+    - Filtraggio per da fare/completato/tutti via api rails aggiungendo i filtri dinamici filter[field]=value
+      integrazione con la select angular e completedOptions array con {label:, value:}
 11 Integrazione autenticazione devise rails
     - Installazione devise
     - Layout di autenticazione
@@ -52,3 +55,4 @@
 
 finito il 13 porta questo file e le slides(vedi se c'è da aggiungere qualosa) su tutti i rami e sul master.
 integra slides con https://www.ruby-lang.org/it/documentation/ruby-from-other-languages/to-ruby-from-java/
+finito tutto vedi x auto update model e al max aggiugilo

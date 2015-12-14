@@ -28,6 +28,13 @@ angular.module('todoApp')
                     $scope.orderingFilter = type + field;
                 };
 
+                // filtering default options
+                $scope.completeOptions = [
+                    {label: "Da fare", value: false},
+                    {label: "Completati", value: true},
+                    {label: "Tutti", value: undefined},
+                ];
+
                 $scope.refresh = function(){
                     itemRepository.all($scope.filter).then(function(items){$scope.items = items.data});
                 };
@@ -36,6 +43,12 @@ angular.module('todoApp')
                     itemRepository.create().then(
                         function(item){ $scope.items.unshift(item.data);}
                     );
+                };
+
+                $scope.update = function(item){
+                    itemRepository.update(item.id, item).then( function() {
+                        $scope.refresh();
+                    });
                 };
 
                 $scope.selectItem = function (item) {

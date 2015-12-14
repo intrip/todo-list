@@ -2,6 +2,11 @@ module Api
   class TodoController < ActionController::Base
     def index
       items = Item
+      if(filters = params.fetch("filter",false))
+        filters.each do |key, value|
+          items = items.where(key => value)
+        end
+      end
       render json: items.all
     end
 
@@ -32,7 +37,7 @@ module Api
     end
 
     def item_attributes
-      params.permit(:title, :description, :body, :due_date)
+      params.permit(:title, :description, :body, :due_date, :completed)
     end
   end
 end
