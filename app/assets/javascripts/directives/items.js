@@ -51,6 +51,12 @@ angular.module('todoApp')
                     });
                 };
 
+                $scope.dateStatusClass = function(due_date){
+                    if (due_date && new Date(due_date) < new Date())
+                        return 'expired';
+                    return '';
+                };
+
                 $scope.selectItem = function (item) {
                     $scope.selectedItem = item;
                 };

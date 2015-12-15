@@ -60,8 +60,8 @@
     - aggiungi belongs_to :user in item
     - Filtraggio automatico per current_user.id in api
 14. Extra
-    - Show data scaduta in rosso
-    - Gravatar integrazione
+    - Show data scaduta in rosso (Date(due_date) < new Date() return 'expired')
+    - Gravatar integrazione (gravatar_image_tag(current_user.email, alt: current_user.email, class: "gravatar")
     - Setup seeds
     - Show tests
 

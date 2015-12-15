@@ -5,7 +5,8 @@
   <ul class="nav navbar-nav navbar-right">
     <li class="dropdown profile-dropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-        <%= current_user.email %>
+      <%= gravatar_image_tag(current_user.email, alt: current_user.email, class: "gravatar") %>
+      <%= current_user.email %>
     </a>
     <ul class="dropdown-menu">
       <li>
