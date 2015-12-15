@@ -29,18 +29,18 @@
     - Ordinamento angular: select per l'ordering e item metodi updateOrdering che ritorna type + field
       dove type è - per desc oppure asc senza niente davanti
     - Ricerca $search
-9  Gestione due date
+9.  Gestione due date
     - Integrazione dettaglio due date con angular datetimepicker:
         metti la 'ui.bootstrap.datetimepicker' in app.js
         inserisci il dropdown e abilitalo: $(document).ready(function(){$('.dropdown-toggle').dropdown()});
     - Formattazione data model corretta: format-date-time-italian
-10 Gestione task completati
+10. Gestione task completati
     - aggiungi campo completed default=false con migration
     - aggiungi il completed ai permitted params del ctrl
     - aggiungi checkbox completato con al ng-click updateItem e ng-checked="item.completed"
     - Filtraggio per da fare/completato/tutti via api rails aggiungendo i filtri dinamici filter[field]=value
       integrazione con la select angular e completedOptions array con {label:, value:}
-11 Integrazione autenticazione devise rails
+11. Integrazione autenticazione devise rails
     - Installazione devise
         rails generate devise:install
         rails generate devise User
@@ -49,10 +49,10 @@
         configura la application_auth layout e different layout for devise
     - Layout di autenticazione
     - Modifica controller per autenticare prima
-12 Integrazione autenticazione api
+12. Integrazione autenticazione api
     - Modifica api che obbliga autenticazione cookie
     - Filtraggio automatico per current_user.id in api
-13 Extra
+13. Extra
     - Show data scaduta in rosso
     - Gravatar integrazione
     - Setup seeds
