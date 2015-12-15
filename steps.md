@@ -52,9 +52,12 @@
     - Modifica controller per autenticare prima
 12. Integrazione logout e navbar
     - Aggiungi navbar con navbar-brand
-    - Aggiungi dropdown per i logoiut con show del current user email (ricordati il dropdown toogle in application.js fatto prima che serve)
+    - Aggiungi dropdown per i logout con show del current user email (ricordati il dropdown toogle in application.js fatto prima che serve 
+      e ricordati link_to destroy_user_session_path, method: :delete )
 13. Integrazione autenticazione api
     - Modifica api che obbliga autenticazione cookie
+    - migration con reference rails generate migration AddUserRefToItem user:references
+    - aggiungi belongs_to :user in item
     - Filtraggio automatico per current_user.id in api
 14. Extra
     - Show data scaduta in rosso
