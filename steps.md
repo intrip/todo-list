@@ -47,17 +47,19 @@
         devise_for :users
         rails generate devise:views
         configura la application_auth layout e different layout for devise
-    - Layout di autenticazione
+    - Layout di autenticazione con yield e div.login
+    - Aggiungi flash messages devise if notice, if alert
     - Modifica controller per autenticare prima
-12. Integrazione autenticazione api
+12. Integrazione logout e flash devise rails e navbar
+    - Aggiungi navbar con pulsante per il logout con show email dropdown
+13. Integrazione autenticazione api
     - Modifica api che obbliga autenticazione cookie
     - Filtraggio automatico per current_user.id in api
-13. Extra
+14. Extra
     - Show data scaduta in rosso
     - Gravatar integrazione
     - Setup seeds
     - Show tests
-    - Automatic save with $watch
 
 finito il 13 porta questo file e le slides(vedi se c'è da aggiungere qualosa) su tutti i rami e sul master.
 integra slides con https://www.ruby-lang.org/it/documentation/ruby-from-other-languages/to-ruby-from-java/
