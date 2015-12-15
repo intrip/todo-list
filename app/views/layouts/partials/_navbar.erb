@@ -1,0 +1,21 @@
+<div id="navbar" class="navbar-collapse collapse">
+  <ul class="nav navbar-nav">
+    <li class="navbar-brand">Todo App</li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown profile-dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        <%= current_user.email %>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa fa-sign-out"></i>Logout
+          <% end %>
+      </li>
+    </ul>
+    </li>
+    <li>
+    </li>
+  </ul>
+</div>

@@ -50,8 +50,9 @@
     - Layout di autenticazione con yield e div.login
     - Aggiungi flash messages devise if notice, if alert
     - Modifica controller per autenticare prima
-12. Integrazione logout e flash devise rails e navbar
-    - Aggiungi navbar con pulsante per il logout con show email dropdown
+12. Integrazione logout e navbar
+    - Aggiungi navbar con navbar-brand
+    - Aggiungi dropdown per i logoiut con show del current user email (ricordati il dropdown toogle in application.js fatto prima che serve)
 13. Integrazione autenticazione api
     - Modifica api che obbliga autenticazione cookie
     - Filtraggio automatico per current_user.id in api
