@@ -64,7 +64,3 @@
     - Gravatar integrazione (gravatar_image_tag(current_user.email, alt: current_user.email, class: "gravatar")
     - Setup seeds
     - Show tests (fixa i rails_helper attivando i seed e invertendo item con user destroy)
-
-finito il 13 porta questo file e le slides(vedi se c'è da aggiungere qualosa) su tutti i rami e sul master.
-integra slides con https://www.ruby-lang.org/it/documentation/ruby-from-other-languages/to-ruby-from-java/
-finito tutto vedi x auto update model e al max aggiugilo
