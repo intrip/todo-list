@@ -5,7 +5,7 @@
     - items.html con item-list e ul.todo-list e li.item con title e due_date
     - popola lo scope con gli items con dentro i title description body completed due_date
 2. Dettaglio todo singolo
-    - direttiva dettaglio con titolo descrizione note
+    - direttiva dettaglio con titolo descrizione note, ricordati il div.form-group
     - metodo selectItem in items e integralo con direttiva che mostra il selectedItem.value
 3. Backend lista item
     - crea model item e migrations con :title, :description, :body, :due_date
@@ -29,6 +29,7 @@
     - Ordinamento angular: select per l'ordering e item metodi updateOrdering che ritorna type + field
       dove type è - per desc oppure asc senza niente davanti
     - Ricerca $search
+    - filtri con form .form-inline e .filter-form e  div.form-group
 9.  Gestione due date
     - Integrazione dettaglio due date con angular datetimepicker:
         metti la 'ui.bootstrap.datetimepicker' in app.js
